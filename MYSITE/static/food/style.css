@@ -1,0 +1,21 @@
+.button-link {
+    display: inline-block; /* Make the link an inline-block element */
+    background-color: #030303; /* Blue */
+    color: hsl(59, 98%, 47%);
+    padding: 10px 20px; /* Add some padding to make the button look bigger */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 10px; /* Add some margin to separate the buttons */
+    text-decoration: none; /* Remove the underline from the link */
+  }
+  
+  .button-link:hover {
+    background-color: #23527c; /* Darker blue on hover */
+  }
+  
+  .button-link:active {
+    background-color: #23527c; /* Darker blue on active */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }

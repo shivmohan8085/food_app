@@ -1,0 +1,11 @@
+{% extends 'food/base.html' %}
+{% block start %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save</button>
+    <button type="button" class="cancel-button" onclick="window.location.href='{% url 'food:alldata' %}'">Cancel</button>
+
+</form>
+{% endblock %}

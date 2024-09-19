@@ -1,0 +1,35 @@
+
+{% extends 'food/base.html' %}
+{% block start %}
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    // Function to open the modal
+    function openModal() {
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    // Open the modal automatically if there are messages
+    window.onload = function() {
+        {% if messages %}
+            openModal();
+        {% endif %}
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'food/base.html' %}
+{% block start %}
+<div class="container mt-5 container-custom">
+    <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="item-container">
+                    <img class="item-image img-fluid" src="{{item.item_image}}" alt="Item Image">
+                    <div class="item-content">
+                        <h3>{{item.item_name}}</h3>
+                        <h5>{{item.item_detail}}</h5>
+                        <h6>INR. {{item.item_price}}</h6>
+                    </div>
+                    <div class="item-content">
+                        <a href="{% url 'food:update_item' item.id %}" class="button-link">Update</a>
+                    </div>
+                    <div class="item-content">
+                        <a href="{% url 'food:delete_item' item.id %}" class="button-link">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="{% url 'food:alldata'%}" class="button-link">All Categories</a>
+            </div>
+    </div>
+</div>
+{% endblock %}

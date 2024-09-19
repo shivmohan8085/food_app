@@ -1,0 +1,17 @@
+{% extends 'food/base.html' %}
+{% block start %}
+
+<div class="popup-wrapper">
+    <div class="popup">
+        <form method='POST'>
+            {% csrf_token %}
+            <h2>Are you sure you want to delete {{ item.item_name }}?</h2>
+            <div class="button-group">
+                <button type="submit" class="confirm-button">Confirm</button>
+                <button type="button" class="cancel-button" onclick="window.location.href='{% url 'food:detail' item.id %}'">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
